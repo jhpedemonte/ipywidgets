@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "prepublish": "npm run build",
-    "build": "npm run build:es5 && npm run build:bundle",
+    "build": "npm run build:es5 && npm run build:lib && npm run build:bundle",
     "build:es5": "babel src --out-dir es5 --presets es2015",
-    "build:bundle": "webpack",
+    "build:bundle": "webpack --config webpack.app.config.js",
+    "build:lib": "webpack --config webpack.widgetslib.config.js",
     "host": "http-server",
     "test": "npm run test:default",
     "test:default": "echo \"No test specified\""

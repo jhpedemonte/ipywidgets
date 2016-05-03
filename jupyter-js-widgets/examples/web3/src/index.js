@@ -15,7 +15,7 @@ var startNewKernel = services.startNewKernel;
 var BASEURL = prompt('Notebook BASEURL', 'http://localhost:8888');
 var WSURL = 'ws:' + BASEURL.split(':').slice(1).join(':');
 
-document.addEventListener("DOMContentLoaded", function(event) {
+// document.addEventListener("DOMContentLoaded", function(event) {
 
     // Connect to the notebook webserver.
     let connectionInfo = {
@@ -47,4 +47,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
         // widgets in the frontend, like the other /web/ examples demonstrate.
         kernel.execute({ code: code });
     });
-});
+// });

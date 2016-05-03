@@ -1,10 +1,13 @@
 module.exports = {
-    entry: './es5/index.js',
+    entry: ['../../src/index.js'],
     output: {
-        filename: 'index.built.js',
+        filename: 'jupyter-js-widgets.js',
+        library: 'jupyter-js-widgets',
+        libraryTarget: 'amd',
         path: './built/',
         publicPath: 'built/'
     },
+    devtool: 'source-map',
     module: {
         loaders: [
             { test: /\.css$/, loader: "style-loader!css-loader" },
