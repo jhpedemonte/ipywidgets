@@ -2,7 +2,7 @@
     "from ipywidgets import IntSlider, Text, VBox",
     "from IPython.display import display",
     "",
-    "s = IntSlider(max=200, value=100)",
+    "s = IntSlider(max=200, value=100, description='SLIDER')",
     "t = Text()",
     "",
     "def update_text(change):",

@@ -11,6 +11,11 @@ export class WidgetManager extends widgets.ManagerBase {
 
         // Register the comm target
         this.commManager.register_target(this.comm_target_name, this.handle_comm_open.bind(this));
+
+        window.define('jupyter-js-widgets', function() {
+            return widgets;
+        });
+        window.require(['jupyter-js-widgets']); // causes requirejs.defined('jupyter-js-widgets') to return true
     }
 
     display_view(msg, view, options) {
